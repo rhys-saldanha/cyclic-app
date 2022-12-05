@@ -1,9 +1,20 @@
 package org.rhyssaldanha.cyclicapp.model;
 
 
-import org.mongojack.Id;
+import lombok.Value;
 
 import java.util.UUID;
 
-public record Activity(@Id UUID id, String name) {
+//@Document(collection = "activities")
+@Value
+public class Activity {
+    //    @Id
+    //    @Getter(onMethod = @__(@JsonIgnore))
+    //    @JsonProperty(value = "_id")
+    UUID id;
+
+    //    @Field
+    //    @Getter(onMethod = @__(@JsonIgnore))
+    //    @JsonProperty
+    String name;
 }
